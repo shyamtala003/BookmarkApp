@@ -75,9 +75,13 @@ printDom();
 //code for store data into localstorage
 
 let saveBookmark = () => {
-    let title = document.getElementById('title').value;
-    let url = document.getElementById('url').value;
-    localStorage.setItem(title, url);
+    let title = document.getElementById('title');
+    let url = document.getElementById('url');
+    localStorage.setItem(title.value, url.value);
+
+    title.setAttribute("value","");
+    url.setAttribute("value","");
+
     dropDownForm.classList.add("drop__down__close");
     dropDownForm.classList.remove("drop__down__show")
     printDom();
