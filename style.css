@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111927;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(219.43, 66%, 31%) 0, transparent 55%);
+    overflow-x: hidden;
+}
+
+.drop__down__form {
+    position: absolute;
+    padding: 3rem;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 2rem;
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    transition: all 1s ease-in-out;
+}
+
+.drop__down__show {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.drop__down__close {
+    top: -50%;
+    left: -50%;
+    translate: -50% -50%;
+}
+
+#close__form {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: transparent;
+}
+
+#close__form ion-icon {
+    color: #fff;
+    font-size: 1.5rem;
+
+}
+
+.input_element {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: #c9c9c9;
+}
+
+input {
+    background: rgba(0, 0, 0, 0.258);
+    padding: 10px;
+    outline: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+input[type="button"] {
+    margin-top: .5rem;
+    background: crimson;
+}
+
+.container {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    color: #fff;
+    backdrop-filter: blur(16px) saturate(80%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.258);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    text-decoration: none;
+    border: 2px dashed #fff;
+}
+
+.add ion-icon {
+    font-size: 2rem;
+}
+
+
+.bookmark__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    display: block;
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+button.close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close ion-icon {
+    font-size: 1.5rem;
+}
+
+.image {
+    border: 5px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+}
+
+.favicon {
+    width: 30px;
+}
+
+.text {
+    max-width: 70%;
+}
+
+.site__name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+a.url {
+    display: block;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #9ca3af;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:580px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        /* justify-content: center; */
+    }
+
+    .image {
+        border: 4px solid rgba(255, 255, 255, 0.75);
+        border-radius: 50%;
+        padding: 10px;
+        display: grid;
+        place-content: center;
+        align-self: center;
+    }
+
+    .favicon {
+        width: 20px;
+    }
+
+    .drop__down__form {
+        min-height: 100vh;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark your importances</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="drop__down__form drop__down__close">
+        <button id="close__form">
+            <ion-icon name="close"></ion-icon>
+        </button>
+        <div class="input_element">
+            <label for="title">Enter Title</label>
+            <input type="text" id="title" placeholder="Google">
+        </div>
+
+        <div class="input_element">
+            <label for="url">Enter Valid Url</label>
+            <input type="url" id="url" placeholder="www.google.com">
+        </div>
+        <input type="button" value="submit" onclick="saveBookmark()">
+    </div>
+
+
+    <div class="container">
+        <a href="#" class="add">
+            <ion-icon name="bookmark"></ion-icon>
+            <p class="title">Add Bookmark</p>
+        </a>
+
+        <div class="bookmark__container">
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
